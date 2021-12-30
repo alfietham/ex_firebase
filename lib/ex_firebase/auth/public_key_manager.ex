@@ -67,6 +67,7 @@ defmodule ExFirebase.Auth.PublicKeyManager do
   def handle_cast(:update_keys, state) do
     case Auth.get_public_keys() do
       {:ok, %{body: keys, headers: headers, status_code: 200}} ->
+        Logger.debug("Fetching pub keys from Google...")
         reload_after_cache_expiration(headers)
         {:noreply, keys}
 
