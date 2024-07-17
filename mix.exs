@@ -29,8 +29,6 @@ defmodule ExFirebase.MixProject do
       {:jose, "~> 1.8"},
       {:poison, "~> 3.1"},
       {:httpoison, "~> 1.4"},
-      {:gen_stage, "~> 0.14.1"},
-      {:gproc, "~> 0.5.0"},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0.0-rc.4", only: [:dev], runtime: false}
     ]
